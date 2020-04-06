@@ -1,0 +1,84 @@
+.adsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.upperDiv{
+
+    height: 70px;
+    background-color: rgba(0,47,52,.03);
+    
+
+
+}
+
+
+.inputBox{
+
+   width: 400px;
+   height: 40px;
+   margin: 10px 20px;
+   border:2px solid black;
+   font-family: sans-serif;
+   font-size: 15px;
+   color: gray;
+
+   
+
+}
+
+
+
+
+
+.ad img {
+    max-height: 60%;
+}
+
+.featured {
+    position: absolute;
+    top: 14px;
+    left: 19px;
+    background-color: #f8dd3c;
+}
+
+.details {
+    text-align: left;
+    padding-left: 20px;
+    height: 95px;
+}
+
+.details div {
+    font-size: 0.7em;
+    color: grey;
+    text-transform: uppercase;
+    font-family: Arial;
+    position: relative;
+    top: -5px;
+}
+
+.ad div span:last-child {
+    float: right;
+    margin-right: 12px;
+}
+
+.ad {
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    border: 1px solid gray;
+    position: relative;
+}
+
+.featured-class {
+    border-left: 10px solid #f8dd3c;
+}
+
+.likeBox {
+    float: right;
+    margin-right: 10px;
+}
+.descInput{
+    height: 20px;
+}

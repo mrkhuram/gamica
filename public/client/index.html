@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script src="vendor/jquery/jquery-ui.min.js"></script>
+
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="vendor/knockoutjs/knockout-3.5.0.js"></script>
+
+    <link rel="stylesheet" href="vendor/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+    <script src="vendor/knockoutjs/knockout-3.5.0.js"></script>
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+
+    <script src="js/application.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+
+
+        <div class="row">
+
+            <section class="col-md-2 toolbox bordered"></section>
+
+            <section  class="col-md-10  bordered no-padding" >
+
+                <section id="controlPanel" class="control-panel">
+
+                    <input webkitdirectory directory data-bind="event:{change:controlPanel.onNewProjectLocation}" class="hidden" id="pFileLocater" type="file" />
+                    <label id="pFileLocaterLBL" for="pFileLocater"></label>
+
+                    <button data-bind="click:controlPanel.createNewProject" class="btn btn-primary">NEW PROJECT</button>
+                    <button data-bind="click:display.toggleUI.bind($root, componentsGallery)" class="btn btn-primary">Show Gallery</button>
+
+                </section>
+
+                <section id="drawingBox">
+                    <iframe id="embeddedPreview" src="http://localhost:3000/" width="100%"></iframe>
+                </section>
+
+            </section>
+
+            <section id="componentsGallery" style="display:none">
+                   <div class="control-panel">
+
+                        <input webkitdirectory directory data-bind="event:{change:editor.events.onFolderMentioned}" class="hidden" id="componentLoader" type="file" />
+                        <label id="componentLoaderLBL" for="componentLoader"></label>
+
+
+                        <button data-bind="click:editor.loadComponent" class="btn btn-primary">Load Component</button>
+                   </div>
+
+                   <section id="galleryPreviewBox" class="full-height">
+                        <iframe class="full-height" id="galleryPreview" src="http://localhost:3001" width="100%"></iframe>
+                   </section>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <script>
+        
+        app.init();
+    
+    </script>
+
+</body>
+
+</html>
